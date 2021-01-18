@@ -1,0 +1,11 @@
+去除Office自定义加载项和按钮
+1.打开VBA编辑器（alt+f11)，在代码窗口中输入下列代码：
+Sub DelCustomStyles()
+Dim st As Style
+For Each st In ActiveWorkbook.Styles
+If Not st.BuiltIn Then st.Delete
+Next
+End Sub
+
+2.关闭VBA编辑器，返回Excel界面。
+打开“宏”对话框(alt+f8)，执行“DelCustomStyles”宏即可一次删除所有自定义单元格样式，而内置的单元格样式会保留。
