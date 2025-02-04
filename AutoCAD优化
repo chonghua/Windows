@@ -1,0 +1,17 @@
+1.禁用“开始”选项卡
+在 AutoCAD 的命令行中键入 STARTMODE。
+输入 0（零）以禁用“开始”选项卡，或输入 1 以启用该选项卡。
+
+2.禁用默认新建文件
+在startmode=0的情况下。
+startup=0，打开软件或图纸默认新建drawing1。
+startup=2，打开软件或图纸默认不新建drawing1。
+
+3.屏蔽AutoCAD通信中心和FTP中心
+AutoCAD通信中心的屏蔽方法
+注册表位置：计算机\HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R24.3\ACAD-7101:804\InfoCenter ，值设置为0。
+AutoCADFTP中心的屏蔽方法
+注册表位置：计算机\HKEY_CURRENT_USER\Software\Autodesk\AutoCAD\R24.3\ACAD-7101:804\FileNavExtensions ，删除右侧Ftpsites。
+
+4.平滑转换显示区域
+输入命令:Vtenable参数设置为0
